@@ -1,3 +1,4 @@
-name: Your New Jekyll Site
-markdown: redcarpet
+name: Jihyeok Seo
+markdown: kramdown
 pygments: true
+permalink: pretty
