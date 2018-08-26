@@ -1,5 +1,5 @@
 name: Jihyeok Seo
 markdown: kramdown
 permalink: pretty
-gems:
+plugins:
   - jekyll-feed
