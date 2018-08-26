@@ -5,7 +5,7 @@ title: A Beautiful Mind
 
 A Beautiful Mind는 수학자 John Nash의 인생을 다룬 영화인데, 영화를 보며 기억에 남는 매우 인상적인 장면이 있다.
 
-![Nash deducing the algorithm of birds' behavior](/images/nash.png)
+![Nash deducing the algorithm of birds' behavior](/assets/nash.png)
 
 바로 Nash 가 비둘기의 행동을 관찰하며 알고리즘을 도출해 내는 장면이다. 나도 비슷한 행위를 해 본 적이 있기에 이 컷을 보고 동질감을 느끼지 않을 수가 없었다.
 

@@ -5,7 +5,7 @@ title: CLRS와 iTunes U
 
 KAIST IIY의 알고리즘 과정을 보충해 주기 위해 CLRS(Introduction to Algorithms)를 주문한 게 오늘 도착했다.
 
-![CLRS](/images/clrs.png)
+![CLRS](/assets/clrs.png)
 
 처음에는 좀 읽을만하다가, IIY에서도 막혔던 그래프에 오니 벌써 혼자 하기 벅차다. 그래서 언젠가 본 적이 있던 iTunes U에 들어가 이 책을 교재로 쓰는 강의가 있는지 찾아봤는데, 웬걸, MIT에서 공개한 OpenCourseWare 가 있었다. [^1] 게다가 CLRS의 L 교수님의 직강!
 
