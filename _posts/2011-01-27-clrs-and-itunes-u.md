@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CLRS와 iTunes U
+tags: archive
 ---
 
 KAIST IIY의 알고리즘 과정을 보충해 주기 위해 CLRS(Introduction to Algorithms)를 주문한 게 오늘 도착했다.

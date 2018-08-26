@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 쓰레기 영어
+tags: archive
 ---
 
 서지혁:

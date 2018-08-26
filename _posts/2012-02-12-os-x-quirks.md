@@ -1,6 +1,7 @@
 ---
 layout: post
 title: OS X Quirks
+tags: archive
 ---
 
 OS X는 멋진 운영체제지만, 몇 가지 신경 쓰이는 quirk들이 있다.

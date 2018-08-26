@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Beautiful Mind
+tags: archive
 ---
 
 A Beautiful Mind는 수학자 John Nash의 인생을 다룬 영화인데, 영화를 보며 기억에 남는 매우 인상적인 장면이 있다.

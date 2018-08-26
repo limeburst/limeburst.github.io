@@ -2,6 +2,7 @@
 layout: post
 title: Twitter Bot in Epio
 link: http://twitter.com/HestBot
+tags: archive
 ---
 
 [Epio](http://ep.io/) 는 파이썬 PaaS(Platform as a service) 이다. 다른 PaaS 로는 [Heroku](http://heroku.com/), [PHP Fog](http://phpfog.com/)[^1], [Google App Engine](http://code.google.com/appengine/) 등이 있다.

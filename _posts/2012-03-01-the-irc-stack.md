@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The IRC Stack
+tags: archive
 ---
 
 The terminal IRC client `irssi` is set up to proxy the IRC connection to its clients.

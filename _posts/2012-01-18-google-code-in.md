@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Google Code-in
+tags: archive
 ---
 
 Google Code-in은 구글에서 주최하는 고등학생 이하 학생들의 오픈 소스 프로젝트 참여를 유도•장려하기 위한 대회이다. 대회의 대략적인 내용은 다음과 같다.

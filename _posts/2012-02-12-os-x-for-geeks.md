@@ -1,6 +1,7 @@
 ---
 layout: post
 title: OS X for Geeks
+tags: archive
 ---
 
 New to Mac and you're a geek? Stop poking around and read this first.

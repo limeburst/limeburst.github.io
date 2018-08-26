@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pulling A Programming
+tags: archive
 ---
 
 I just realized that programming has shaped and changed so much of my life. I learned and experienced a plethora that I would never have otherwise. I should put it this way; 'I pulled a programming'.
