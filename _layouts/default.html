@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-        {% feed_meta %}
-    </head>
-    <body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.title }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width"> {% feed_meta %}
+</head>
 
-          {{ content }}
+<body>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Jihyeok Seo<br />
-                {{ site.description }}<br />
-                me@limeburst.net
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/limeburst">github.com/limeburst</a><br />
-                <a href="https://twitter.com/limeburst">twitter.com/limeburst</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
+  <div class="site">
+    <div class="header">
+      <h1 class="title"><a href="/">{{ site.title }}</a></h1>
+      <a class="extra" href="/">home</a>
+    </div>
 
-    </body>
+    {{ content }}
+
+    <div class="footer">
+      <div class="contact">
+        <p>
+          Jihyeok Seo<br /> {{ site.description }}<br /> me@limeburst.net
+        </p>
+      </div>
+      <div class="contact">
+        <p>
+          <a href="https://github.com/limeburst">github.com/limeburst</a><br />
+          <a href="https://twitter.com/limeburst">twitter.com/limeburst</a><br />
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
 </html>
