@@ -1,4 +1,4 @@
-limeburst.net
-=============
+ji.hyeok.org
+============
 
 Jihyeok Seo
