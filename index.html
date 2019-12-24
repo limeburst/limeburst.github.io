@@ -15,10 +15,20 @@ title: Jihyeok Seo
 
 <h2>Blog Posts</h2>
 <ul>
-  {% for post in site.posts %} {% unless post.tags contains "archive" %}
+  {% for post in site.posts %} {% if post.tags == empty %}
   <li>
     <span>{{ post.date | date_to_string }}</span> &raquo;
     <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
-  {% endunless %} {% endfor %}
+  {% endif %} {% endfor %}
+</ul>
+
+<h2>Biology</h2>
+<ul>
+  {% for post in site.posts %} {% if post.tags contains "biology" %}
+  <li>
+    <span>{{ post.date | date_to_string }}</span> &raquo;
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endif %} {% endfor %}
 </ul>
