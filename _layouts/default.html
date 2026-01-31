@@ -4,24 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width"> {% feed_meta %}
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {% feed_meta %}
   <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-  <header>
-    <h1>
-      <a href="/">
-        <ruby>
-          徐志赫
-          <rt>서지혁</rt>
-        </ruby>
-      </a>
-    </h1>
-  </header>
-  <main>
-    {{ content }}
-  </main>
+  {{ content }}
 </body>
 
 </html>

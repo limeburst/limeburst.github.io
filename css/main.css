@@ -1,7 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: serif;
+}
+
 body {
-    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 560 / 340;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.contact {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.hanja {
+    font-size: 1.5rem;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.15em;
+    align-self: flex-start;
+}
+
+.content {
+    width: 100%;
+    max-width: 560px;
+    padding: 0 2.5rem 2.5rem;
+}
+
+.content h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.content ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.content li {
+    line-height: 1.6;
+    font-size: 0.85rem;
+}
+
+.content a {
+    color: inherit;
+}
+
+article {
+    width: 100%;
+    max-width: 560px;
+    padding: 2.5rem;
+}
+
+article h2 {
+    margin-bottom: 0.25rem;
+}
+
+article p, article li, article blockquote {
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+article blockquote {
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 2px solid #ccc;
 }
 
 img {
     max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        background: #1a1a1a;
+        color: #e0e0e0;
+    }
+
+    article blockquote {
+        border-left-color: #555;
+    }
 }

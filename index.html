@@ -3,21 +3,35 @@ layout: default
 title: Jihyeok Seo
 ---
 
-<p>{{ site.description }}</p>
+<div class="card">
+  <div class="left">
+    <div class="name">
+      Seo<br>
+      Jihyeok
+    </div>
+    <div class="contact">
+      <a href="https://ji.hyeok.org">ji.hyeok.org</a><br>
+      <a href="mailto:ji@hyeok.org">ji@hyeok.org</a>
+    </div>
+  </div>
+  <div class="hanja">徐志赫</div>
+</div>
 
-<h2>Profiles</h2>
-<ul>
-  <li><a href="https://hackers.pub/@jihyeok" rel="me">Fediverse</a></li>
-  <li><a href="https://github.com/limeburst">GitHub</a></li>
-  <li><a href="https://goodreads.com/limeburst">Goodreads</a></li>
-</ul>
+<div class="content">
+  <h2>Profiles</h2>
+  <ul>
+    <li><a href="https://hackers.pub/@jihyeok" rel="me">Fediverse</a></li>
+    <li><a href="https://github.com/limeburst">GitHub</a></li>
+    <li><a href="https://goodreads.com/limeburst">Goodreads</a></li>
+  </ul>
 
-<h2>Blog Posts</h2>
-<ul>
-  {% for post in site.posts %} {% if post.tags == empty %}
-  <li>
-    <span>{{ post.date | date_to_string }}</span> &raquo;
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-  {% endif %} {% endfor %}
-</ul>
+  <h2>Blog Posts</h2>
+  <ul>
+    {% for post in site.posts %} {% if post.tags == empty %}
+    <li>
+      <span>{{ post.date | date_to_string }}</span> &raquo;
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>

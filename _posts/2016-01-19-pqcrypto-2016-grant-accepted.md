@@ -1,4 +1,5 @@
 ---
+layout: post
 title: PQCrypto 2016 장학 프로그램
 ---
 
