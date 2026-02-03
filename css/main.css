@@ -48,6 +48,17 @@ body {
     text-decoration: underline;
 }
 
+.card-link {
+    width: 100%;
+    max-width: 560px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-link .card {
+    aspect-ratio: auto;
+}
+
 .hanja {
     font-size: 1.5rem;
     writing-mode: vertical-rl;
@@ -83,7 +94,7 @@ body {
 article {
     width: 100%;
     max-width: 560px;
-    padding: 2.5rem;
+    padding: 0 2.5rem 2.5rem;
 }
 
 article h2 {
