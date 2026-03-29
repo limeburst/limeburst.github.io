@@ -112,6 +112,15 @@ body {
     word-break: keep-all;
 }
 
+#recent-activities td:nth-child(2) a[href^="http"] {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
 .skeleton td span {
     display: block;
     height: 0.85rem;
