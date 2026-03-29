@@ -24,6 +24,24 @@ title: Jihyeok Seo
     <li><a href="https://hackers.pub/@jihyeok" rel="me">Hackers' Pub</a></li>
   </ul>
 
+  <div id="hackers-pub">
+    <h2>Hackers' Pub</h2>
+    <table id="recent-activities">
+      <script>
+        for (let i = 0; i < 5; i++) {
+          const rows = Math.floor(Math.random() * 2) + 1;
+          const lastWidth = Math.floor(Math.random() * 51) + 30;
+          let spans = "";
+          for (let j = 0; j < rows; j++) {
+            const w = j === rows - 1 ? `style="width:${lastWidth}%"` : "";
+            spans += `<span ${w}></span>`;
+          }
+          document.write(`<tr class="skeleton"><td><span></span></td><td>${spans}</td></tr>`);
+        }
+      </script>
+    </table>
+  </div>
+
   <h2>Blog Posts</h2>
   <ul>
     {% for post in site.posts %} {% if post.tags == empty %}
@@ -49,3 +67,52 @@ title: Jihyeok Seo
     <li>2013–2016 &raquo; Software Engineer at <a href="https://pinkfong.com">The Pinkfong Company</a></li>
   </ul>
 </div>
+
+<script>
+  const _hp = fetch("https://hackers.pub/graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: `{
+      actorByHandle(handle: "@jihyeok@hackers.pub") {
+        posts(first: 100) {
+          edges {
+            node {
+              ... on Article { name url published }
+              ... on Note { content url published replyTarget { url } sharedPost { url } }
+            }
+          }
+        }
+      }
+    }` }),
+  }).then(r => r.json());
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const table = document.getElementById("recent-activities");
+    try {
+      const { data } = await _hp;
+      const edges = data.actorByHandle.posts.edges;
+      table.innerHTML = "";
+      let count = 0;
+      for (const { node } of edges) {
+        if (!node.published || node.replyTarget || node.sharedPost) continue;
+        if (count >= 5) break;
+        count++;
+        const tr = document.createElement("tr");
+        const date = new Date(node.published).toLocaleDateString("en-US", {
+          year: "numeric", month: "short", day: "numeric",
+        });
+        let content = "";
+        if (node.name) {
+          content = node.name;
+        } else if (node.content) {
+          content = node.content;
+        }
+        tr.innerHTML = `<td><a href="${node.url}">${date}</a></td><td>${content}</td>`;
+        table.appendChild(tr);
+      }
+      if (count === 0) document.getElementById("hackers-pub").hidden = true;
+    } catch {
+      document.getElementById("hackers-pub").hidden = true;
+    }
+  });
+</script>
