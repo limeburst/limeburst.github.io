@@ -89,6 +89,7 @@ body {
 
 .content table {
     width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
     margin-bottom: 1.5rem;
     font-size: 0.85rem;
@@ -103,11 +104,12 @@ body {
 .content td:first-child {
     white-space: nowrap;
     padding-right: 1rem;
-    width: 1%;
+    width: 7rem;
 }
 
 .content td:nth-child(2) {
-    width: 99%;
+    overflow-wrap: break-word;
+    word-break: keep-all;
 }
 
 .skeleton td span {
