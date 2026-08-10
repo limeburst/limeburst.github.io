@@ -3,5 +3,6 @@ description: Jihyeok Seo; also known as <strong>limeburst</strong> on the intern
 
 markdown: kramdown
 permalink: pretty
+timezone: Asia/Seoul
 plugins:
   - jekyll-feed
