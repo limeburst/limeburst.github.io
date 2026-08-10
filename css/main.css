@@ -165,7 +165,7 @@ article blockquote {
     border-left: 2px solid #ccc;
 }
 
-img {
+img, video {
     max-width: 100%;
 }
 
