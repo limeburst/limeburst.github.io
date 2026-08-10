@@ -165,6 +165,32 @@ article blockquote {
     border-left: 2px solid #ccc;
 }
 
+article p,
+article ul,
+article ol {
+    margin-bottom: 1.1em;
+}
+
+article ul,
+article ol {
+    padding-left: 1.25em;
+}
+
+article li {
+    margin-bottom: 0.35em;
+}
+
+article h2:not(:first-child) {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+article img,
+article video {
+    display: block;
+    margin: 1.75em 0;
+}
+
 img, video {
     max-width: 100%;
 }
