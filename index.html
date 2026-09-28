@@ -85,7 +85,7 @@ title: Jihyeok Seo
           edges {
             node {
               ... on Article { name url published }
-              ... on Note { content url published replyTarget { url } sharedPost { url } mentions(first: 1) { edges { node { id } } } }
+              ... on Note { content url published replyTarget { url } sharedPost { url } quotedPost { url } quoteTargetState mentions(first: 1) { edges { node { id } } } }
             }
           }
         }
@@ -101,7 +101,7 @@ title: Jihyeok Seo
       table.innerHTML = "";
       let count = 0;
       for (const { node } of edges) {
-        if (!node.published || node.replyTarget || node.sharedPost || node.mentions?.edges.length) continue;
+        if (!node.published || node.replyTarget || node.sharedPost || node.quotedPost || node.quoteTargetState || node.mentions?.edges.length) continue;
         if (count >= 5) break;
         count++;
         const tr = document.createElement("tr");
