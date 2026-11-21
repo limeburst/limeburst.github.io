@@ -87,6 +87,14 @@ body {
     color: inherit;
 }
 
+.content h2 a {
+    text-decoration: none;
+}
+
+.content h2 a:hover {
+    text-decoration: underline;
+}
+
 .content table {
     width: 100%;
     table-layout: fixed;
