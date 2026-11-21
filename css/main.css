@@ -112,7 +112,7 @@ body {
     word-break: keep-all;
 }
 
-#recent-activities td:nth-child(2) a[href^="http"] {
+#social-activities td:nth-child(2) a[href^="http"] {
     display: inline-block;
     max-width: 100%;
     overflow: hidden;

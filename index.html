@@ -22,11 +22,12 @@ title: Jihyeok Seo
   <ul>
     <li><a href="https://github.com/limeburst">GitHub</a></li>
     <li><a href="https://hackers.pub/@jihyeok" rel="me">Hackers' Pub</a></li>
+    <li><a href="https://social.eunha.social/@jihyeok" rel="me">eunha</a></li>
   </ul>
 
-  <div id="hackers-pub">
-    <h2>Hackers' Pub</h2>
-    <table id="recent-activities">
+  <div id="social">
+    <h2>Social</h2>
+    <table id="social-activities">
       <script>
         for (let i = 0; i < 5; i++) {
           const rows = Math.floor(Math.random() * 4) + 2;
@@ -83,49 +84,31 @@ title: Jihyeok Seo
 </div>
 
 <script>
-  const _hp = fetch("https://hackers.pub/graphql", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query: `{
-      actorByHandle(handle: "@jihyeok@hackers.pub") {
-        posts(first: 100) {
-          edges {
-            node {
-              ... on Article { name url published }
-              ... on Note { content url published replyTarget { url } sharedPost { url } quotedPost { url } quoteTargetState mentions(first: 1) { edges { node { id } } } }
-            }
-          }
-        }
-      }
-    }` }),
-  }).then(r => r.json());
+  const _social = fetch("https://social.eunha.social/api/v1/accounts/117615177150274445/statuses?exclude_replies=true&exclude_reblogs=true&limit=40")
+    .then(r => r.json());
+
+  function formatDate(published) {
+    const d = new Date(published);
+    return `${String(d.getDate()).padStart(2, "0")} ${d.toLocaleDateString("en-US", { month: "short" })} ${d.getFullYear()}`;
+  }
 
   document.addEventListener("DOMContentLoaded", async () => {
-    const table = document.getElementById("recent-activities");
+    const table = document.getElementById("social-activities");
     try {
-      const { data } = await _hp;
-      const edges = data.actorByHandle.posts.edges;
+      const statuses = await _social;
       table.innerHTML = "";
       let count = 0;
-      for (const { node } of edges) {
-        if (!node.published || node.replyTarget || node.sharedPost || node.quotedPost || node.quoteTargetState || node.mentions?.edges.length) continue;
+      for (const s of statuses) {
+        if (s.visibility !== "public" || s.in_reply_to_id || s.reblog || s.quote || s.mentions.length) continue;
         if (count >= 5) break;
         count++;
         const tr = document.createElement("tr");
-        const d = new Date(node.published);
-        const date = `${String(d.getDate()).padStart(2, "0")} ${d.toLocaleDateString("en-US", { month: "short" })} ${d.getFullYear()}`;
-        let content = "";
-        if (node.name) {
-          content = node.name;
-        } else if (node.content) {
-          content = node.content;
-        }
-        tr.innerHTML = `<td><a href="${node.url}">${date}</a></td><td>${content}</td>`;
+        tr.innerHTML = `<td><a href="${s.url}">${formatDate(s.created_at)}</a></td><td>${s.spoiler_text || s.content}</td>`;
         table.appendChild(tr);
       }
-      if (count === 0) document.getElementById("hackers-pub").hidden = true;
+      if (count === 0) document.getElementById("social").hidden = true;
     } catch {
-      document.getElementById("hackers-pub").hidden = true;
+      document.getElementById("social").hidden = true;
     }
   });
 </script>
